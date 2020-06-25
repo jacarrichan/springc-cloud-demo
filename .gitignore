@@ -1,0 +1,14 @@
+### Ecplise ###
+**/.settings
+**/.classpath
+**/.project
+####idea###
+.idea/
+*.iml
+### maven ###
+target/
+*.war
+*.ear
+*.zip
+*.tar
+*.tar.gz
