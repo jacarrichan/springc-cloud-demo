@@ -20,6 +20,7 @@
         <module>springcloud-service-helloworld-b</module>
         <module>springcloud-service-ribbon</module>
         <module>springcloud-service-zuul</module>
+        <module>springcloud-service-user</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>

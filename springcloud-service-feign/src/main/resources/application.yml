@@ -1,3 +1,12 @@
 spring:
   profiles:
     active: dev
+
+ribbon:
+  eager-load:
+    enabled: true
+    clients: service-helloworld
+logging:
+  level:
+      root: info
+      com.jacarrichan.demo.feign: debug

@@ -12,10 +12,18 @@ public class IndexController {
 
     @Resource
     private HelloFeignClient helloFeignClient;
+    @Resource
+    private UserFeignClient userFeignClient;
 
     @GetMapping(value = "/index")
     public String hello() {
         System.out.println("Enter hello world service!");
         return helloFeignClient.getHelloContent();
+    }
+
+    @GetMapping(value = "/user")
+    public String user() {
+        System.out.println("Enter hello world service!");
+        return userFeignClient.getHelloContent();
     }
 }
