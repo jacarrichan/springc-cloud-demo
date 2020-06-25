@@ -9,6 +9,8 @@ import org.springframework.context.support.PropertySourcesPlaceholderConfigurer;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.concurrent.TimeUnit;
+
 @EnableEurekaClient
 @SpringBootApplication
 @RestController
@@ -29,7 +31,9 @@ public class ServiceUserWorldApplication {
     }
 
     @RequestMapping("/")
-    public String home() {
+    public String home() throws InterruptedException {
+        //模仿业务执行需要的时间
+        TimeUnit.MILLISECONDS.sleep(300);
         return "user,Hello World from port " + port;
     }
 }
