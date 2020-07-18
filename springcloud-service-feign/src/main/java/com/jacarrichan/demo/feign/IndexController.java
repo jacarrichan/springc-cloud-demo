@@ -14,6 +14,8 @@ public class IndexController {
     private HelloFeignClient helloFeignClient;
     @Resource
     private UserFeignClient userFeignClient;
+    @Resource
+    private IpFeignClient ipFeignClient;
 
     @GetMapping(value = "/index")
     public String hello() {
@@ -25,5 +27,11 @@ public class IndexController {
     public String user() {
         System.out.println("Enter hello world service!");
         return userFeignClient.getHelloContent();
+    }
+
+    @GetMapping(value = "/ip")
+    public String ip() {
+        System.out.println("Enter hello world service!");
+        return ipFeignClient.json();
     }
 }
